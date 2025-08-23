@@ -1,0 +1,22 @@
+{
+  "name": "marketingad",
+  "version": "1.0.0",
+  "description": "Plataforma completa de marketing digital com IA",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "start": "npm run start --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
