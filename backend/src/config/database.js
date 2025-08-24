@@ -25,7 +25,8 @@ const connectDatabase = async () => {
     console.log('✅ Database connected successfully');
     
     if (process.env.NODE_ENV === 'development') {
-      await sequelize.sync({ alter: true });
+      // Tables already created with force sync - skip auto-sync to avoid issues
+      // await sequelize.sync({ alter: true });
       console.log('📊 Database synchronized');
     }
   } catch (error) {

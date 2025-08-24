@@ -15,13 +15,23 @@ import {
   LogOut,
   Zap,
   ChevronDown,
-  Building2
+  Building2,
+  Facebook
 } from 'lucide-react';
 import { useAuthStore } from '@/stores/authStore';
 import { useState } from 'react';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { 
+    name: 'Meta Ads', 
+    icon: Facebook,
+    children: [
+      { name: 'Dashboard', href: '/dashboard/meta-ads' },
+      { name: 'Campanhas', href: '/dashboard/meta-ads/campaigns' },
+      { name: 'Conectar Conta', href: '/dashboard/meta-ads/setup' },
+    ]
+  },
   { 
     name: 'Anúncios', 
     icon: Target,
